@@ -17,17 +17,23 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(243, 250, 250);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components{
+  .right {
+    @apply bg-primary/15 text-primary min-w-min p-1 text-center rounded-lg font-semibold text-xs h-6
+  }
+  .new {
+    @apply text-white text-[13px] bg-primary rounded-2xl w-10 h-[18px] text-center
+  }
+  .featured {
+    @apply text-white text-[13px] bg-very-dark-g-cyan rounded-2xl w-14 h-[18px] text-center
   }
 }
